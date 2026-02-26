@@ -1,0 +1,72 @@
+name: Validate Marketplace
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate marketplace.json
+        run: |
+          MANIFEST=".claude-plugin/marketplace.json"
+
+          if [ ! -f "$MANIFEST" ]; then
+            echo "ERROR: $MANIFEST not found"
+            exit 1
+          fi
+
+          # Validate JSON syntax
+          if ! node -e "JSON.parse(require('fs').readFileSync('$MANIFEST', 'utf8'))"; then
+            echo "ERROR: $MANIFEST contains invalid JSON"
+            exit 1
+          fi
+
+          # Validate required structure
+          node -e "
+            const manifest = JSON.parse(require('fs').readFileSync('$MANIFEST', 'utf8'));
+
+            const errors = [];
+
+            if (!manifest.name) errors.push('Missing top-level \"name\"');
+            if (!manifest.owner?.name) errors.push('Missing \"owner.name\"');
+            if (!manifest.metadata?.version) errors.push('Missing \"metadata.version\"');
+            if (!Array.isArray(manifest.plugins)) errors.push('\"plugins\" must be an array');
+
+            if (Array.isArray(manifest.plugins)) {
+              const names = new Set();
+              manifest.plugins.forEach((p, i) => {
+                if (!p.name) errors.push('Plugin [' + i + ']: missing \"name\"');
+                if (!p.version) errors.push('Plugin [' + i + ']: missing \"version\"');
+                if (!p.description) errors.push('Plugin [' + i + ']: missing \"description\"');
+                if (!p.source) errors.push('Plugin [' + i + ']: missing \"source\"');
+                if (p.name && names.has(p.name)) errors.push('Duplicate plugin name: \"' + p.name + '\"');
+                if (p.name) names.add(p.name);
+              });
+            }
+
+            if (errors.length > 0) {
+              errors.forEach(e => console.error('ERROR: ' + e));
+              process.exit(1);
+            }
+
+            console.log('Marketplace validation passed');
+            console.log('  Name:', manifest.name);
+            console.log('  Version:', manifest.metadata.version);
+            console.log('  Plugins:', manifest.plugins.length);
+            manifest.plugins.forEach(p => {
+              console.log('    -', p.name, 'v' + p.version, '(' + (p.category || 'uncategorized') + ')');
+            });
+          "
