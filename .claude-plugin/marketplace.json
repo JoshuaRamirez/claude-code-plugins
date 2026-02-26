@@ -25,14 +25,14 @@
     },
     {
       "name": "domain-driven-ui",
-      "source": { "source": "directory", "path": "./domain-driven-ui" },
+      "source": "./domain-driven-ui",
       "description": "Commands, skills, and agents for generating and validating code against the Domain-Driven UI Architecture specification",
       "version": "1.0.0",
       "category": "architecture"
     },
     {
       "name": "spec-vault-toolkit",
-      "source": { "source": "directory", "path": "./spec-vault-toolkit" },
+      "source": "./spec-vault-toolkit",
       "description": "Specification vault maintenance: triage, digest, absorb, audit, and knowledge graph upkeep",
       "version": "1.0.0",
       "category": "documentation"
