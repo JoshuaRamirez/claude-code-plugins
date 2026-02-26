@@ -1,0 +1,27 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "RedJay",
+  "owner": {
+    "name": "Joshua Ramirez"
+  },
+  "metadata": {
+    "description": "RedJay plugin marketplace - observability and productivity tools for Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "claude-code-telemetry",
+      "source": { "source": "url", "url": "https://github.com/JoshuaRamirez/claude-code-telemetry.git" },
+      "description": "SQL Server telemetry - tracks prompts, tool usage, timing, and conversation history",
+      "version": "2.1.0",
+      "category": "observability"
+    },
+    {
+      "name": "ado-work-items",
+      "source": { "source": "url", "url": "https://github.com/JoshuaRamirez/ms-ado-az-claude-code-plugin.git" },
+      "description": "Azure DevOps work item management via CLI and REST API",
+      "version": "1.0.0",
+      "category": "integrations"
+    }
+  ]
+}
