@@ -1,4 +1,9 @@
+# Plugin symlinks (local development only)
 telemetry/
 ado/
-domain-driven-ui/
-spec-vault-toolkit/
+
+# Claude Code local state
+.claude/
+
+# Claude Code scratch output
+claude-genui-output/

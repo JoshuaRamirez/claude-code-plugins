@@ -4,10 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Repository Is
 
-This is the **RedJay plugin marketplace** — a federated manifest that registers Claude Code plugins for discovery and installation. The marketplace itself contains no plugin code; it is a thin orchestration layer.
+This is the **RedJay plugin marketplace** — a federated manifest that registers publicly installable Claude Code plugins for discovery and installation. The marketplace itself contains no plugin code; it is a thin orchestration layer.
+
+For personal and vault-embedded plugins, see the [RedJay-Private marketplace](https://github.com/JoshuaRamirez/private-claude-code-plugins) (private repo).
 
 - **Manifest**: `.claude-plugin/marketplace.json` — the sole authoritative file listing all published plugins
-- **Symlinks**: `telemetry/`, `ado/`, `domain-driven-ui/`, and `spec-vault-toolkit/` are symlinks to the actual plugin locations on disk (gitignored). They exist for local development convenience only.
+- **Symlinks**: `telemetry/` and `ado/` are symlinks to the actual plugin locations on disk (gitignored). They exist for local development convenience only.
 
 ## Registered Plugins
 
@@ -15,8 +17,6 @@ This is the **RedJay plugin marketplace** — a federated manifest that register
 |--------|--------------|-------------|----------|----------|
 | `claude-code-telemetry` | `telemetry/` → `C:\Source\claude-code-telemetry` | github.com/JoshuaRamirez/claude-code-telemetry | Python (pyodbc, pytest, ruff) | observability |
 | `ado-work-items` | `ado/` → `C:\Source\ms-ado-az-claude-code-plugin` | github.com/JoshuaRamirez/ms-ado-az-claude-code-plugin | Markdown-only (az CLI) | integrations |
-| `domain-driven-ui` | `domain-driven-ui/` → vault `domain-driven-ui/` | Embedded in UI Architecture vault | Markdown + C# templates | architecture |
-| `spec-vault-toolkit` | `spec-vault-toolkit/` → vault `spec-vault-toolkit/` | Embedded in UI Architecture vault | Markdown-only | documentation |
 
 ## Architecture
 
@@ -25,9 +25,7 @@ claude-code-plugins/              ← this repo (marketplace hub)
 ├── .claude-plugin/
 │   └── marketplace.json          ← plugin registry manifest
 ├── telemetry/ → (symlink)        ← gitignored
-├── ado/ → (symlink)              ← gitignored
-├── domain-driven-ui/ → (symlink) ← gitignored (vault-embedded)
-└── spec-vault-toolkit/ → (symlink) ← gitignored (vault-embedded)
+└── ado/ → (symlink)              ← gitignored
 
 claude-code-telemetry/            ← separate repo (Python hooks plugin)
 ├── hooks/db_logger.py            ← core DB logic
@@ -87,20 +85,10 @@ The ADO plugin is markdown-only — no build, no tests, no dependencies. It uses
 
 Prerequisites: Azure CLI with `azure-devops` extension, authenticated via `az login`.
 
-## Working in the Vault Plugins
-
-`domain-driven-ui` and `spec-vault-toolkit` are **vault-embedded plugins** — they live inside the Domain-Driven UI Architecture Obsidian vault at `C:\Obsidian\Joshua Ramirez\999 Reference\Research\UI Architecture\`. Unlike telemetry and ADO, they are not standalone repos; they are subdirectories of the vault repo.
-
-- **domain-driven-ui**: 5 commands (`/rule`, `/domain`, `/flow`, `/pattern`, `/trace`), 4 skills (generate-domain, validate-compliance, classify-flow, generate-tests), 2 agents (architecture-advisor, code-reviewer)
-- **spec-vault-toolkit**: 7 skills (canon-digest, file-processor, triage-tracker, canon-absorb, file-disposition, graph-updater, logical-audit), 1 hook (post-edit-reindex on Edit/Write)
-
-Runtime dependency: Both plugins use the `arch-graph` MCP server (Kuzu graph DB) which is registered via the vault's project-level `.mcp.json`, not the plugin manifests.
-
 ## Conventions
 
-- Most plugins are standalone git repositories; vault plugins are an exception (embedded in the vault repo)
+- All plugins in this marketplace are standalone git repositories with URL sources
 - Symlinks in this repo are for local development only and must stay in `.gitignore`
 - The marketplace manifest `version` field for each plugin must match the plugin's own version
 - Telemetry plugin: Python 3.11+, ruff for linting, pytest for testing, hatch for building
 - ADO plugin: Pure markdown, no runtime dependencies beyond `az` CLI
-- Vault plugins: Markdown + C# templates, depend on arch-graph MCP server in the vault project
