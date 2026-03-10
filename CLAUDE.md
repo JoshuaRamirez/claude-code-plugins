@@ -17,6 +17,7 @@ For personal and vault-embedded plugins, see the [RedJay-Private marketplace](ht
 |--------|--------------|-------------|----------|----------|
 | `claude-code-telemetry` | `telemetry/` → `C:\Source\claude-code-telemetry` | github.com/JoshuaRamirez/claude-code-telemetry | Python (pyodbc, pytest, ruff) | observability |
 | `ado-work-items` | `ado/` → `C:\Source\ms-ado-az-claude-code-plugin` | github.com/JoshuaRamirez/ms-ado-az-claude-code-plugin | Markdown-only (az CLI) | integrations |
+| `roslyn-mcp` | — | github.com/JoshuaRamirez/RoslynMcpServer | C# (.NET 8, Roslyn) | languages |
 
 ## Architecture
 
@@ -40,6 +41,11 @@ ms-ado-az-claude-code-plugin/     ← separate repo (markdown-only plugin)
 ├── skills/                       ← reference docs (WIQL, fields, bulk ops)
 ├── agents/work-items.md          ← multi-step work item assistant
 └── tests/verified-commands.md    ← manual test log
+
+RoslynMcpServer/                  ← separate repo (C# MCP server)
+├── RoslynMcpServer/              ← .NET 8 MCP server (41 Roslyn tools)
+├── RoslynMcpServer.Tests/        ← unit tests
+└── .claude-plugin/plugin.json    ← plugin manifest
 ```
 
 ## Working in This Repo
