@@ -6,16 +6,9 @@
   },
   "metadata": {
     "description": "RedJay plugin marketplace - observability and productivity tools for Claude Code",
-    "version": "1.3.0"
+    "version": "1.4.0"
   },
   "plugins": [
-    {
-      "name": "claude-code-telemetry",
-      "source": { "source": "url", "url": "https://github.com/JoshuaRamirez/claude-code-telemetry.git" },
-      "description": "SQL Server telemetry - tracks prompts, tool usage, timing, and conversation history",
-      "version": "2.1.0",
-      "category": "observability"
-    },
     {
       "name": "ado-work-items",
       "source": { "source": "url", "url": "https://github.com/JoshuaRamirez/ms-ado-az-claude-code-plugin.git" },

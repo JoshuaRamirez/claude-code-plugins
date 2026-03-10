@@ -8,7 +8,6 @@ For personal and vault-embedded plugins, see [RedJay-Private](https://github.com
 
 | Plugin | Version | Category | Source |
 |--------|---------|----------|--------|
-| [claude-code-telemetry](https://github.com/JoshuaRamirez/claude-code-telemetry) | 2.1.0 | observability | GitHub |
 | [ado-work-items](https://github.com/JoshuaRamirez/ms-ado-az-claude-code-plugin) | 1.0.0 | integrations | GitHub |
 | [roslyn-mcp](https://github.com/JoshuaRamirez/RoslynMcpServer) | 0.4.0 | languages | GitHub |
 
