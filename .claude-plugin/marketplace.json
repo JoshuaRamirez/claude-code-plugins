@@ -6,9 +6,16 @@
   },
   "metadata": {
     "description": "RedJay plugin marketplace - observability and productivity tools for Claude Code",
-    "version": "1.4.0"
+    "version": "1.5.0"
   },
   "plugins": [
+    {
+      "name": "color-theory-mcp",
+      "source": { "source": "url", "url": "https://github.com/JoshuaRamirez/color-theory-mcp.git" },
+      "description": "24 MCP tools for color space conversions, harmony generation, accessibility validation, and cultural meaning lookup",
+      "version": "1.0.0",
+      "category": "design"
+    },
     {
       "name": "ado-work-items",
       "source": { "source": "url", "url": "https://github.com/JoshuaRamirez/ms-ado-az-claude-code-plugin.git" },
