@@ -29,6 +29,13 @@
       "description": "Roslyn-powered C# refactoring MCP server - 41 tools for code navigation, analysis, generation, and refactoring",
       "version": "0.4.1",
       "category": "languages"
+    },
+    {
+      "name": "llm-api-facade",
+      "source": { "source": "url", "url": "https://github.com/JoshuaRamirez/llm-api-facade.git" },
+      "description": "Universal LLM facade MCP server - dual-layer information architecture abstracting any LLM backend (local or cloud) with typed extensions",
+      "version": "0.1.0",
+      "category": "integrations"
     }
   ]
 }
