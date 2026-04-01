@@ -36,6 +36,13 @@
       "description": "Universal LLM facade MCP server - dual-layer information architecture abstracting any LLM backend (local or cloud) with typed extensions",
       "version": "0.1.0",
       "category": "integrations"
+    },
+    {
+      "name": "advanced-prompting-engine",
+      "source": { "source": "url", "url": "https://github.com/JoshuaRamirez/advanced-prompting-engine.git" },
+      "description": "Universal prompt creation engine — MCP server with 10-axis philosophical manifold measuring intent across epistemology, ontology, axiology, teleology, phenomenology, praxeology, methodology, semiotics, hermeneutics, and heuristics",
+      "version": "0.1.1",
+      "category": "ai"
     }
   ]
 }
