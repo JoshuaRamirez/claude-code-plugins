@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "RedJay plugin marketplace - observability and productivity tools for Claude Code",
-    "version": "1.5.0"
+    "version": "1.6.0"
   },
   "plugins": [
     {
@@ -40,8 +40,8 @@
     {
       "name": "advanced-prompting-engine",
       "source": { "source": "url", "url": "https://github.com/JoshuaRamirez/advanced-prompting-engine.git" },
-      "description": "Universal prompt creation engine — MCP server with 10-axis philosophical manifold measuring intent across epistemology, ontology, axiology, teleology, phenomenology, praxeology, methodology, semiotics, hermeneutics, and heuristics",
-      "version": "0.2.0",
+      "description": "Universal prompt creation engine — MCP server with 12-axis philosophical manifold for principled prompt construction. Measures intent across 12 philosophical dimensions and returns a construction basis.",
+      "version": "0.5.0",
       "category": "ai"
     }
   ]
