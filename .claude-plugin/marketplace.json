@@ -43,6 +43,13 @@
       "description": "Universal prompt creation engine — MCP server with 12-axis philosophical manifold for principled prompt construction. Measures intent across 12 philosophical dimensions and returns a construction basis.",
       "version": "0.5.0",
       "category": "ai"
+    },
+    {
+      "name": "toprank",
+      "source": { "source": "url", "url": "https://github.com/nowork-studio/toprank" },
+      "description": "Open-source MIT Claude Code plugin with 9 SEO and Google Ads skills; connects Google Search Console, PageSpeed Insights, and the Google Ads API to ship meta tag rewrites, JSON-LD schema generation, keyword bid adjustments, and CMS content pushes.",
+      "version": "0.11.0",
+      "category": "integrations"
     }
   ]
 }
