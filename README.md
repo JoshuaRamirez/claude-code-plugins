@@ -11,6 +11,7 @@ For personal and vault-embedded plugins, see [RedJay-Private](https://github.com
 | [ado-work-items](https://github.com/JoshuaRamirez/ms-ado-az-claude-code-plugin) | 1.0.0 | integrations | GitHub |
 | [roslyn-mcp](https://github.com/JoshuaRamirez/RoslynMcpServer) | 0.4.0 | languages | GitHub |
 | [llm-api-facade](https://github.com/JoshuaRamirez/llm-api-facade) | 0.1.0 | integrations | GitHub |
+| [toprank](https://github.com/nowork-studio/toprank) | 0.10.0 | integrations | GitHub |
 
 ## Structure
 
