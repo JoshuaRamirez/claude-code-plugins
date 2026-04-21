@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "RedJay plugin marketplace - observability and productivity tools for Claude Code",
-    "version": "1.8.2"
+    "version": "1.8.3"
   },
   "plugins": [
     {
@@ -55,8 +55,8 @@
         "source": "url",
         "url": "https://github.com/JoshuaRamirez/advanced-prompting-engine.git"
       },
-      "description": "Universal prompt creation engine \u2014 MCP server with 12-axis philosophical manifold. 4 tools, 4 prompts, 4 resources, and the prompt-refiner skill with task-aware priority framework (11 task types, 12+ intervention patterns, routing-collision detection). Measures intent across 12 philosophical dimensions and returns a construction basis. BGE-large-en-v1.5 semantic bridge at native 1024d; 8-text literary benchmark at 17/20.",
-      "version": "0.7.2",
+      "description": "Universal prompt creation engine \u2014 MCP server with 12-axis philosophical manifold. 4 tools, 4 prompts, 4 resources, and the prompt-refiner skill with task-aware priority framework (11 task types, 12+ intervention patterns, routing-collision detection). Measures intent across 12 philosophical dimensions and returns a construction basis. BGE-large-en-v1.5 semantic bridge at native 1024d with 23 disambiguation triggers resolving ethics/axiology and teleology/axiology routing collisions; 8-text literary benchmark at 18/20.",
+      "version": "0.7.3",
       "category": "ai"
     }
   ]
