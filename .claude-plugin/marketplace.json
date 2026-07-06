@@ -6,9 +6,19 @@
   },
   "metadata": {
     "description": "RedJay plugin marketplace - observability and productivity tools for Claude Code",
-    "version": "1.10.0"
+    "version": "1.11.0"
   },
   "plugins": [
+    {
+      "name": "claude-code-telemetry",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/JoshuaRamirez/claude-code-telemetry.git"
+      },
+      "description": "Comprehensive PostgreSQL telemetry for Claude Code sessions - tracks prompts, tool usage, timing, thinking blocks, subagents, and full conversation history",
+      "version": "3.0.1",
+      "category": "observability"
+    },
     {
       "name": "color-theory-mcp",
       "source": {
