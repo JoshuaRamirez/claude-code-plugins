@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "RedJay plugin marketplace - observability and productivity tools for Claude Code",
-    "version": "1.13.0"
+    "version": "1.14.0"
   },
   "plugins": [
     {
@@ -78,6 +78,16 @@
       "description": "Pipes-and-filters orchestration for chunk-level analysis with Claude Code sub-agents. Splits a corpus into chunks, runs a deterministic DAG of map / reduce / gate / terminal filters in parallel, and unions the results. The orchestration loop runs in the main Claude conversation \u2014 no daemon, no MCP server \u2014 driven by an on-disk state machine that makes runs resumable and lost-message tolerant. Ships three example pipelines (map-reduce, classify-and-extract, fan-out/fan-in) and a /splitty-design skill that authors a pipeline YAML from a natural-language request.",
       "version": "0.1.0",
       "category": "orchestration"
+    },
+    {
+      "name": "chrome-bookmarks-mcp",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/JoshuaRamirez/chrome-bookmarks-mcp.git"
+      },
+      "description": "Manage Chrome's synced bookmarks from Claude \u2014 16 tools to list, search, add, move, rename, deduplicate, and reorganize folders. Edits go through chrome.bookmarks via a companion extension, so they sync durably.",
+      "version": "1.0.0",
+      "category": "productivity"
     }
   ]
 }
