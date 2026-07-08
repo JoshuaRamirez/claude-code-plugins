@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "RedJay plugin marketplace - observability and productivity tools for Claude Code",
-    "version": "1.14.7"
+    "version": "1.14.8"
   },
   "plugins": [
     {
@@ -86,7 +86,7 @@
         "url": "https://github.com/JoshuaRamirez/chrome-bookmarks-mcp.git"
       },
       "description": "Manage Chrome's synced bookmarks from Claude \u2014 16 tools to list, search, add, move, rename, deduplicate, and reorganize folders. Edits go through chrome.bookmarks via a companion extension, so they sync durably.",
-      "version": "1.0.7",
+      "version": "1.0.8",
       "category": "productivity"
     }
   ]
