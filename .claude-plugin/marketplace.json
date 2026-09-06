@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "RedJay plugin marketplace - observability and productivity tools for Claude Code",
-    "version": "1.15.2"
+    "version": "1.15.3"
   },
   "plugins": [
     {
@@ -65,7 +65,7 @@
         "source": "url",
         "url": "https://github.com/JoshuaRamirez/advanced-prompting-engine.git"
       },
-      "description": "Universal prompt creation engine \u2014 MCP server with 12-axis philosophical manifold. 4 tools, 4 prompts, 4 resources, and the prompt-refiner skill with task-aware priority framework (11 task types, 12+ intervention patterns, routing-collision detection). Measures intent across 12 philosophical dimensions and returns a construction basis. BGE-large-en-v1.5 semantic bridge at native 1024d with 23 disambiguation triggers resolving ethics/axiology and teleology/axiology routing collisions; 8-text literary benchmark at 18/20.",
+      "description": "Universal prompt creation engine — MCP server with 12-axis philosophical manifold. 4 tools, 4 prompts, 4 resources, and the prompt-refiner skill with task-aware priority framework (11 task types, 12+ intervention patterns, routing-collision detection). Measures intent across 12 philosophical dimensions and returns a construction basis. BGE-large-en-v1.5 semantic bridge at native 1024d with 23 disambiguation triggers resolving ethics/axiology and teleology/axiology routing collisions; 8-text literary benchmark at 18/20.",
       "version": "0.8.0",
       "category": "ai"
     },
@@ -75,7 +75,7 @@
         "source": "url",
         "url": "https://github.com/JoshuaRamirez/splitty.git"
       },
-      "description": "Pipes-and-filters orchestration for chunk-level analysis with Claude Code sub-agents. Splits a corpus into chunks, runs a deterministic DAG of map / reduce / gate / terminal filters in parallel, and unions the results. The orchestration loop runs in the main Claude conversation \u2014 no daemon, no MCP server \u2014 driven by an on-disk state machine that makes runs resumable and lost-message tolerant. Ships three example pipelines (map-reduce, classify-and-extract, fan-out/fan-in) and a /splitty-design skill that authors a pipeline YAML from a natural-language request.",
+      "description": "Pipes-and-filters orchestration for chunk-level analysis with Claude Code sub-agents. Splits a corpus into chunks, runs a deterministic DAG of map / reduce / gate / terminal filters in parallel, and unions the results. The orchestration loop runs in the main Claude conversation — no daemon, no MCP server — driven by an on-disk state machine that makes runs resumable and lost-message tolerant. Ships three example pipelines (map-reduce, classify-and-extract, fan-out/fan-in) and a /splitty-design skill that authors a pipeline YAML from a natural-language request.",
       "version": "0.1.0",
       "category": "orchestration"
     },
@@ -85,8 +85,8 @@
         "source": "url",
         "url": "https://github.com/JoshuaRamirez/chrome-bookmarks-mcp.git"
       },
-      "description": "Manage Chrome's synced bookmarks from Claude \u2014 17 tools to list, search, add, move, rename, deduplicate, reorganize, and back up/restore folders. Edits go through chrome.bookmarks via a companion extension, so they sync durably.",
-      "version": "1.1.2",
+      "description": "Manage Chrome's synced bookmarks from Claude — 17 tools to list, search, add, move, rename, deduplicate, reorganize, and back up/restore folders. Edits go through chrome.bookmarks via a companion extension, so they sync durably.",
+      "version": "1.1.11",
       "category": "productivity"
     }
   ]
