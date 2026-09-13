@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "RedJay plugin marketplace - observability and productivity tools for Claude Code",
-    "version": "1.15.3"
+    "version": "1.16.0"
   },
   "plugins": [
     {
@@ -87,6 +87,16 @@
       },
       "description": "Manage Chrome's synced bookmarks from Claude — 17 tools to list, search, add, move, rename, deduplicate, reorganize, and back up/restore folders. Edits go through chrome.bookmarks via a companion extension, so they sync durably.",
       "version": "1.1.11",
+      "category": "productivity"
+    },
+    {
+      "name": "five-whys",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/JoshuaRamirez/five-whys.git"
+      },
+      "description": "Exhaustive Five Whys: asks why five levels deep with five reasons at every step (5x5x5x5x5 = 3,905 reasons), fanned out across parallel sub-agents, validated, and assembled into one JSON file for whole-context reading. Generation only; analysis is up to you.",
+      "version": "0.1.0",
       "category": "productivity"
     }
   ]
