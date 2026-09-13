@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "RedJay plugin marketplace - observability and productivity tools for Claude Code",
-    "version": "1.16.0"
+    "version": "1.16.1"
   },
   "plugins": [
     {
@@ -95,8 +95,8 @@
         "source": "url",
         "url": "https://github.com/JoshuaRamirez/five-whys.git"
       },
-      "description": "Exhaustive Five Whys: asks why five levels deep with five reasons at every step (5x5x5x5x5 = 3,905 reasons), fanned out across parallel sub-agents, validated, and assembled into one JSON file for whole-context reading. Generation only; analysis is up to you.",
-      "version": "0.1.0",
+      "description": "Exhaustive Five Whys: asks why five levels deep with five reasons at every step (5x5x5x5x5 = 3,905 reasons) using parallel sub-agents in capped waves, then assembles one JSON tree plus an index and mechanical hygiene flags. Smoke preset, model choice, resumable and partial runs. Generation only; analysis is up to you.",
+      "version": "0.2.0",
       "category": "productivity"
     }
   ]
