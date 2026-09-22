@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "RedJay plugin marketplace - observability and productivity tools for Claude Code",
-    "version": "1.17.2"
+    "version": "1.17.3"
   },
   "plugins": [
     {
@@ -16,7 +16,7 @@
         "url": "https://github.com/JoshuaRamirez/claude-code-telemetry.git"
       },
       "description": "Comprehensive PostgreSQL telemetry for Claude Code sessions - tracks prompts, tool usage, timing, thinking blocks, subagents, and full conversation history",
-      "version": "3.2.0",
+      "version": "3.3.0",
       "category": "observability"
     },
     {
