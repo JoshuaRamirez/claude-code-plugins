@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "RedJay plugin marketplace - observability and productivity tools for Claude Code",
-    "version": "1.16.2"
+    "version": "1.17.0"
   },
   "plugins": [
     {
@@ -97,6 +97,16 @@
       },
       "description": "Exhaustive Five Whys: asks why, or any combination of why, what, when, where and how, about one problem or a list, each up to five levels deep with five answers at every step (3,905 per tree at full depth), using parallel sub-agents in capped waves and a 1-5 model level, then assembles one JSON file plus an index and mechanical hygiene flags. Resumable and partial runs. Generation only; analysis is up to you.",
       "version": "0.3.0",
+      "category": "productivity"
+    },
+    {
+      "name": "prompt-library",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/JoshuaRamirez/prompt-library.git"
+      },
+      "description": "CSV-backed prompt library: save, search, fill {{variables}} in, and reuse prompts through MCP tools, five slash commands and a promptlib CLI. A SessionStart hook lists your stored prompts so Claude can offer to reuse them. Stdlib Python; your prompts stay in one human-editable CSV on your machine.",
+      "version": "0.1.0",
       "category": "productivity"
     }
   ]
